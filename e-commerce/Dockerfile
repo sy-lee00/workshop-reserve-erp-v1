@@ -12,22 +12,24 @@ RUN npm run build
 FROM gradle:8-jdk21 AS backend-build
 WORKDIR /app/backend
 
-# e-commerce 안의 모든 것(backend, frontend 등)을 복사
+# e-commerce 안의 모든 것 복사
 COPY . .
 
-# 1단계에서 빌드된 React 결과물(build)을 스프링 부트 정적 자원 폴더(static)로 복사
-# gradlew가 backend/dia 안에 있으므로, 리소스 경로는 backend/dia/src/... 로 들어갑니다.
+# 빌드된 React 결과물을 스프링 부트 정적 자원 폴더로 복사
 COPY --from=frontend-build /app/frontend/build ./backend/dia/src/main/resources/static/
 
-# 💡 수정: gradlew 파일이 있는 backend/dia 폴더 안으로 정확히 진입합니다.
+# 💡 조치 1: 리눅스 환경에서 gradlew 실행이 가능하도록 권한 부여 추가
 WORKDIR /app/backend/backend/dia
+RUN chmod +x ./gradlew
+
+# Gradle 빌드 수행 (테스트 제외)
 RUN ./gradlew build -x test --no-daemon
 
 # 3단계: 최종 실행 환경
 FROM eclipse-temurin:21-jre-jammy
 EXPOSE 8080
 
-# 💡 수정: backend/dia 내부에서 빌드된 jar 파일을 최종 실행 이미지로 복사합니다.
-COPY --from=backend-build /app/backend/backend/dia/build/libs/*-SNAPSHOT.jar app.jar
+# 💡 조치 2: plain.jar를 제외하고 오직 진짜 실행 가능한 뚱뚱한(Fat) jar 파일만 타겟팅하여 복사
+COPY --from=backend-build /app/backend/backend/dia/build/libs/*[!plain].jar app.jar
 
 ENTRYPOINT ["java", "-jar", "/app.jar"]
