@@ -50,4 +50,4 @@
 
 ## 결과물
 - **Live Demo**: [링크 연결]
-- **Source Code**: [GitHub 링크]
+- **Source Code**: [[GitHub 링크]](https://github.com/sy-lee00/workshop-reserve-erp.git)
