@@ -43,7 +43,7 @@ function MyReservation({ userId }) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/my-reservation?userId=${userId}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/my-reservation?userId=${userId}`)
       .then((res) => setReservations(res.data))
       .catch((err) => console.error("프로그램 정보 불러오기 오류:", err));
   }, [userId]);

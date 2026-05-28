@@ -32,7 +32,7 @@ function WorkshopInfo() {
       try {
         hasLogged.current = true;
 
-        await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/erp-system/visit-log`', {
+        await axios.post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/erp-system/visit-log`, {
             workshopId: id,
             programId: null
         });

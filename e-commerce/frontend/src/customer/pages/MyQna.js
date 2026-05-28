@@ -26,7 +26,7 @@ function MyQna({ userId }) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/my-qna?userId=${userId}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/my-qna?userId=${userId}`)
       .then((res) => setMyQnas(res.data))
       .catch((err) => console.error("문의 정보 불러오기 오류:", err));
   }, [userId]);

@@ -81,7 +81,7 @@ function AdminBanner({ userId }) {
     if (!window.confirm("정말 삭제하시겠습니까?")) return;
     alert("배너가 삭제되었습니다.");
 
-    await axios.delete(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/erp-system/banner/${bannerId}`);
+    await axios.delete(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/erp-system/banner/${bannerId}`);
     fetchBanners();
   };
 
@@ -213,7 +213,7 @@ function AdminBanner({ userId }) {
 
                           <div className="banner-cell img-col">
                             <img
-                              src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`${b.image}`}
+                              src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}${b.image}`}
                               alt="banner"
                               width="120"
                             />

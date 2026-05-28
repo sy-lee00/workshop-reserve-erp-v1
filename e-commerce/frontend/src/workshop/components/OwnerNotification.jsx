@@ -41,7 +41,7 @@ function OwnerNotification({ ownerId }) {
   if (!myNotifications) return <p>로딩 중...</p>;
   const openModal = (id) => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/my-notification-info?id=${id}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/my-notification-info?id=${id}`)
       .then((res) => {
         setNotification(res.data);
         console.log(res.data);
@@ -54,7 +54,7 @@ function OwnerNotification({ ownerId }) {
     if (notification && !notification.viewed) {
       axios
         .post(
-          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/notification/update-notification?id=${notification.id}`
+          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/notification/update-notification?id=${notification.id}`
         )
         .then(() =>
           setMyNotifications((prev) =>

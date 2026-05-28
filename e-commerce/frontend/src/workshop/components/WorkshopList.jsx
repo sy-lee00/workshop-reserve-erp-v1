@@ -131,8 +131,8 @@ function WorkshopList({ ownerId }) {
                       <img
                         src={
                           w.profileImg
-                            ? `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/upload/workshop/${w.workshopId}/${w.profileImg}`
-                            : `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/upload/workshop/workshop_default.png`
+                            ? `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/upload/workshop/${w.workshopId}/${w.profileImg}`
+                            : `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/upload/workshop/workshop_default.png`
                         }
                         alt="워크샵 이미지"
                         className="ws-profile-img"

@@ -165,7 +165,7 @@ function AdminRegister() {
         }
 
         axios
-            .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/erp-system/admin/register`, newUser, {
+            .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/erp-system/admin/register`, newUser, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

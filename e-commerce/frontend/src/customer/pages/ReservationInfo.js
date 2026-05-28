@@ -33,7 +33,7 @@ function ReservationInfo({ userId }) {
 
       axios
         .get(
-          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/continue-reservation?reservationId=${passedId}`
+          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/continue-reservation?reservationId=${passedId}`
         )
         .then((res) => {
           setScheduleInfo(res.data.schedule);
@@ -53,7 +53,7 @@ function ReservationInfo({ userId }) {
 
       axios
         .get(
-          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/reservation-info?scheduleId=${scheduleId}&userId=${userId}`
+          `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/reservation-info?scheduleId=${scheduleId}&userId=${userId}`
         )
         .then((res) => {
           setScheduleInfo(res.data.schedule);

@@ -354,7 +354,7 @@ function ProgramInfo() {
             >
               {program.thumb != null ? (
                 <img
-                  src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/upload/workshop/${workshop.workshopId}/program/${program.programId}/${program.thumb}`}
+                  src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/upload/workshop/${workshop.workshopId}/program/${program.programId}/${program.thumb}`}
                   alt="프로그램 썸네일"
                 />
               ) : (

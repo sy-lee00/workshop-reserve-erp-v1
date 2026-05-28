@@ -10,7 +10,7 @@ function QnaAdmin({ ownerId, onClose }) {
 
   const fetchQna = useCallback(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/workshop/report/qna-admin?ownerId=${ownerId}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/workshop/report/qna-admin?ownerId=${ownerId}`)
       .then((res) => setQnaAdmin(res.data))
       .catch((err) => console.log(err));
   }, [ownerId]);
@@ -53,7 +53,7 @@ function QnaAdmin({ ownerId, onClose }) {
   const del = (qnaAdminId) => {
     if (!window.confirm("정말 삭제하시겠습니까?")) return;
     axios
-      .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/workshop/report/delete`, { qnaAdminId })
+      .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/workshop/report/delete`, { qnaAdminId })
       .then((res) => {
         if (res.data === 1) {
           setQnaAdmin((prev) =>

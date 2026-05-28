@@ -14,7 +14,7 @@ function NoticeDetail({ adminNoticeId, onClose, adminId, onUpdate }) {
 
     axios
       .get(
-        `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/erp-system/detail?adminNoticeId=${adminNoticeId}`
+        `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/erp-system/detail?adminNoticeId=${adminNoticeId}`
       )
       .then((res) => {
         setNoticeDetail(res.data);

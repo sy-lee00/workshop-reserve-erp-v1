@@ -63,7 +63,7 @@ function MyNotification({ userId }) {
 
   const openModal = (id) => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/my-notification-info?id=${id}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/my-notification-info?id=${id}`)
       .then((res) => {
         setNotification(res.data); // 데이터 저장
         setIsModalOpen(true);

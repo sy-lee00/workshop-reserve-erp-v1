@@ -17,7 +17,7 @@ function ReservationDetail({ userId }) {
   useEffect(() => {
     axios
       .get(
-        `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/reservation-detail?reservationId=${id}`
+        `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/reservation-detail?reservationId=${id}`
       )
       .then((res) => {
         setReservation(res.data);

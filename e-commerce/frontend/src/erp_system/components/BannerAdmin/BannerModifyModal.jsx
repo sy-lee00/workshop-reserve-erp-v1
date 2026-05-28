@@ -74,7 +74,7 @@ function BannerModifyModal({
 
             <label>기존 이미지</label>
             <img
-              src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`${editBanner.image}`}
+              src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}${editBanner.image}`}
               alt="배너"
               width="200"
             />

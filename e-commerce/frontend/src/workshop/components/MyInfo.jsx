@@ -20,7 +20,7 @@ function MyInfo({ ownerId }) {
   useEffect(() => {
     if (!ownerId) return;
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/workshop/my?ownerId=${ownerId}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/workshop/my?ownerId=${ownerId}`)
       .then((res) => {
         setUser(res.data);
       })
@@ -70,7 +70,7 @@ function MyInfo({ ownerId }) {
       return;
     }
     axios
-      .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/workshop/owner-quit?ownerId=${ownerId}`)
+      .post(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/workshop/owner-quit?ownerId=${ownerId}`)
       .then((res) => {
         alert("탈퇴 처리되었습니다.");
         logout();
@@ -84,7 +84,7 @@ function MyInfo({ ownerId }) {
   }
 
   const existingImageUrl = user.profileImg
-    ? `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/upload/user/${ownerId}/${user.profileImg}`
+    ? `${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/upload/user/${ownerId}/${user.profileImg}`
     : null;
 
   return (

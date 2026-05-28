@@ -14,7 +14,7 @@ function MyFollow({ userId }) {
 
   useEffect(() => {
     axios
-      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/customer/my-follow?userId=${userId}`)
+      .get(`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/customer/my-follow?userId=${userId}`)
       .then((res) => {
         setFollows(res.data);
 
@@ -88,7 +88,7 @@ function MyFollow({ userId }) {
                     >
                       {follow.profileImg != null ? (
                         <img
-                          src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}`/upload/workshop/${follow.workshopId}/${follow.profileImg}`}
+                          src={`${process.env.REACT_APP_API_URL || 'http://localhost:9090'}/upload/workshop/${follow.workshopId}/${follow.profileImg}`}
                           alt="워크샵 이미지"
                         />
                       ) : (
