@@ -6,6 +6,10 @@ COPY ./frontend/package*.json ./
 RUN npm ci
 
 COPY ./frontend/ ./
+
+ARG REACT_APP_API_URL
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
 RUN npm run build
 
 # 2단계: 백엔드(Java Gradle) 빌드 환경
