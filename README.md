@@ -8,10 +8,10 @@
 ### **프로젝트 성격**: KH정보교육원 국비 팀 프로젝트(4인)  
 ### **주요 역할**
 #### **1. 데이터 기반의 이커머스 UX 최적화**
-    - 마이페이지 및 개인화 영역: 위시리스트, 결제 내역 등 사용자 개인화 화면 담당
-    - 인증 시스템: 회원가입 및 로그인 프로세스 UX 설계
+- 마이페이지 및 개인화 영역: 위시리스트, 결제 내역 등 사용자 개인화 화면 담당
+- 인증 시스템: 회원가입 및 로그인 프로세스 UX 설계
 #### **2. 효율적인 업무 환경을 위한 ERP 인터페이스 설계**
-    - ERP 대시보드: 운영 관리자용 통계 시각화 및 권한 관리 시스템 구축 
+- ERP 대시보드: 운영 관리자용 통계 시각화 및 권한 관리 시스템 구축 
 ### **작업 기간**: 2025.11 ~ 2025.12(7주)
 
 ---
@@ -49,5 +49,7 @@
 ---
 
 ## 결과물
-- **Live Demo**: [[링크 연결]](https://workshop-reserve-erp.onrender.com)
+- **Live Demo**: [[링크 연결]](https://workshop-reserve-erp.onrender.com)  
+    - 일반 사용자(id/pwd): customer-111@test.com / customer-111  
+    - 관리자(id/pwd): admin@admin.com / qwer1234!
 - **Source Code**: [[GitHub 링크]](https://github.com/sy-lee00/workshop-reserve-erp.git)
