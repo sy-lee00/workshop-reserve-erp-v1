@@ -1,6 +1,6 @@
 # [공방 클래스 예약 및 통합 운영 관리(ERP) 시스템]  
 >**공방 예약의 편의성과 운영 효율성을 극대화한 통합 관리 플랫폼 프로젝트**  
-<img width="640" height="360" alt="메인페이지" src="https://github.com/user-attachments/assets/0eed4837-fb6c-4173-a68c-48264be4a284" />
+<img width="640" height="360" alt="메인페이지" src="https://github.com/user-attachments/assets/e1576d8f-038a-4f97-b4eb-ce875ec83726" />
 
 ---
 
